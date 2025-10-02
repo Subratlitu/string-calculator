@@ -1,24 +1,27 @@
-## String Calculator
+# String Calculator
 
-# A simple String Calculator implemented in Node.js using Test-Driven Development (TDD).
+A simple String Calculator implemented in Node.js using Test-Driven Development (TDD).
 
+---
 
-# Features
+## Features
 
-1.Empty string returns 0
-2.Single number returns the number
-3.Two or more numbers return their sum
-4.Supports new line (\n) as a delimiter
-5.Supports custom delimiters (//;\n1;2 → 3)
-6.Throws error for negative numbers ("negative numbers not allowed")
+1. Empty string returns 0  
+2. Single number returns the number  
+3. Two or more numbers return their sum  
+4. Supports new line (`\n`) as a delimiter  
+5. Supports custom delimiters (`//;\n1;2` → 3)  
+6. Throws error for negative numbers ("negative numbers not allowed")  
 
+---
 
+## Setup
 
-# Setup
+```bash
 git clone https://github.com/Subratlitu/string-calculator.git
 cd string-calculator
 npm install
-
+```
 # Run Tests 
 npm test
 
