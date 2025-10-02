@@ -1,8 +1,17 @@
 function add(numbers) {
-  if (!numbers) return 0;   // if empty string, return 0
+  if (!numbers) return 0;
 
-  // Split on both comma and newline
-  const parts = numbers.split(/[\n,]/);
+  let delimiters = /[\n,]/;  // default: comma or newline
+
+  // Check for custom delimiter at the start
+  if (numbers.startsWith("//")) {
+    const delimiterLineEnd = numbers.indexOf("\n");
+    const customDelimiter = numbers.substring(2, delimiterLineEnd);
+    delimiters = new RegExp(`[${customDelimiter}]`);
+    numbers = numbers.substring(delimiterLineEnd + 1);
+  }
+
+  const parts = numbers.split(delimiters);
 
   return parts.reduce((sum, num) => sum + Number(num), 0);
 }
